@@ -8,7 +8,7 @@
 
   if ($_POST) {
     function getCaptcha($secretkey) {
-      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Lc03QIkAAAAAIzovIcas7wotRJMUrY2_BvLI9G_&response={$secretkey}");
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=={$secretkey}");
       $return = json_decode($response);
       return $return;
     }
